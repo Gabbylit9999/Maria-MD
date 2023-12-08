@@ -2,31 +2,31 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 //contact details
-global.ownernumber =  "919931122319"
-global.ownername = "Ayush Pandey"
-global.ytname = "YT: AyushBotz.inc"
-global.socialm = "GitHub: Ayushpandey023"
-global.location = "Indian"
+global.ownernumber =  "254112565651"
+global.ownername = "Gabby"
+global.ytname = "YT: Gabby"
+global.socialm = "GitHub: Gabby"
+global.location = "African"
 
-global.ownername = 'Ayush' //owner name
-global.botname = '𝐌𝐀𝐑𝐈𝐀-𝐌𝐃' //name of the bot
+global.ownername = 'Gabby' //owner name
+global.botname = 'Gabby' //name of the bot
 
 //sticker details
-global.stickername = '💙𓆩‎✘AʏᴜSʜ✘𓆪_✰'
+global.stickername = 'Gabby'
 global.packname = 'Sticker By'
-global.author = 'Maria Bot'
+global.author = 'Gabby Bot'
 //console view/theme
 global.themeemoji = '🧩'
-global.wm = "Ayush botz inc."
+global.wm = "Gabby botz inc."
 
 //theme link
-global.link = 'https://chat.whatsapp.com/Jllsl2OaQNoBjepxzuVsZM'
+global.link = 'https://chat.whatsapp.com/Jllsl2OaQNpxzuVsZM'
 
 //custom prefix
-global.prefa = ['.']
+global.prefa = [',']
 
 //false=disable and true=enable
-global.autoRecording = false //auto recording
+global.autoRecording = true //auto recording
 global.autoTyping = false //auto typing
 global.autorecordtype = false //auto typing + recording
 global.autoread = false //auto read messages
