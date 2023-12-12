@@ -20,7 +20,7 @@ global.themeemoji = '🧩'
 global.wm = "Gabby botz inc."
 
 //theme link
-global.link = 'https://chat.whatsapp.com/Jllsl2OaQNpxzuVsZM'
+global.link = 'https://chat.whatsapp.com/IVKtBsd6nMZLQ9VfECEyrJ'
 
 //custom prefix
 global.prefa = [',']
@@ -32,7 +32,7 @@ global.autorecordtype = false //auto typing + recording
 global.autoread = false //auto read messages
 global.autobio = false //auto update bio
 global.anti212 = true //auto block +212
-global.autoread_status = false //auto view status/story
+global.autoread_status = true //auto view status/story
 
 
 
@@ -42,7 +42,7 @@ global.mess = {
     prem: 'This feature can be used by premium user only',
     admin: 'This feature can be used by admin only',
     botAdmin: 'This feature can only be used when the bot is a group admin ',
-    owner: 'This feature can be used by owner only',
+    owner: 'This feature can be used by my darling Gabby only',
     group: 'This feature is only for groups',
     private: 'This feature is only for private chats',
     wait: 'In process... ',    
