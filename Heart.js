@@ -898,20 +898,11 @@ break
 
             }
             break
-            case 'toaud':
-            case 'toaudio': {
-                if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Send/Reply Video/Audio that you want to make into audio with caption ${prefix + command}`)
-                reply(mess.wait)
-                let media = await Maria.downloadMediaMessage(qmsg)
-                let audio = await toAudio(media, 'mp4')
-                Maria.sendMessage(m.chat, {
-                    audio: audio,
-                    mimetype: 'audio/mpeg'
-                }, {
-                    quoted: m
-                })
-            }
-            break
+            case 'checkdeath':
+             if (!text) return replay(`Use Someone's Name, Example : ${prefix + command} Ayush`)
+              predea = await axios.get(`https://api.agify.io/?name=${q}`)
+              reply(`Name : ${predea.data.name}\n*Dead At Age :* ${predea.data.age} Year.\n\n_Quick, Quick, Repent Bro, Because No One Knows About Death_`)
+              break
             case 'tomp3': {
                 if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Send/Reply Video/Audio that you want to make into MP3 with caption ${prefix + command}`)
                 reply(mess.wait)
@@ -1207,7 +1198,7 @@ case 'chatgpt': case 'gpt':{
         
         let txxt = `👋🏻 Hi *${pushname}*, i am  *Maria-Md*📍\nA whatsapp bot created by: Ayush \n\n I don't have time for chit-chat Darling. Use command from *${prefix}help* list if you want me to do anything.`
 
-        Maria.sendMessage(m.chat, { video: { url: `https://c.tenor.com/4TLYvKWI2mgAAAPo/nakano-yotsuba-smile.mp4` }, caption: txxt, gifPlayback: true }, { quoted: m });
+        Maria.sendMessage(m.chat, { photo: { url: "./Gallery/ch1.jpg" }, caption: txxt, gifPlayback: true }, { quoted: m });
         break
       case "support":
       
@@ -1215,7 +1206,7 @@ case 'chatgpt': case 'gpt':{
 
         await Maria.sendMessage(m.sender, { text: `${tex}` },);
 
-        await Maria.sendMessage(m.chat, { video: { url: `https://i.makeagif.com/media/3-25-2023/NO05ia.mp4` }, caption: 'I sent you the support Link in personal message.\n Pls check.', gifPlayback: true }, { quoted: m });
+        await Maria.sendMessage(m.chat, { video: { url: "./Gallery/ch2.jpg" }, caption: 'I sent you the support Link in personal message.\n Pls check.', gifPlayback: true }, { quoted: m });
         break
 
       case "info":
@@ -1225,10 +1216,9 @@ case 'chatgpt': case 'gpt':{
 *🌟Description:* A WhatsApp Bot With Rich  features based on Maria
 *🚦Uptime:* ${runtime(process.uptime())}
 *🕸Version:* 1.2.0
-*👤Creator:*  𝑨𝒚𝒖𝒔𝒉 𝒑𝒂𝒏𝒅𝒆𝒚
-*🎐supportgc:* ${global.support}\n
+*👤Creator:*  𝑨𝒚𝒖𝒔𝒉 𝒑𝒂𝒏𝒅𝒆𝒚\n
 *Powered by Ayush*`
-Maria.sendMessage(m.chat, { video: { url: `https://media.tenor.com/VmwZnGeD0oEAAAPo/maria-naruse-shinmai-maou-no-testament.mp4` }, caption: ifx, gifPlayback: true }, { quoted: m });
+Maria.sendMessage(m.chat, { video: { url: "./Gallery/ch3" }, caption: ifx, gifPlayback: true }, { quoted: m });
         break
 
  
@@ -1549,7 +1539,7 @@ Here's the list of my Commands.
 └──────────⊰
 
 ┌──⊰ _*👮🏻‍♂️GROUP👮🏻‍♂️*_
-│⊳ 🍁 ${prefix}Antilink
+│⊳ 🍁 ${prefix}antilink
 │⊳ 🍁 ${prefix}closetime
 │⊳ 🍁 ${prefix}opentime
 │⊳ 🍁 ${prefix}kick
@@ -1569,6 +1559,7 @@ Here's the list of my Commands.
 └──────────⊰
 
 ┌──⊰ _*🎉FUN🎉*_
+│⊳🎟️ ${prefix}checkdeath
 │⊳ 🎟️ ${prefix}truth
 │⊳ 🎟️ ${prefix}dare
 │⊳🎟️ ${prefix}couple 
@@ -1582,7 +1573,7 @@ Here's the list of my Commands.
 │⊳🎟️ ${prefix}cutecheck
 │⊳🎟️ ${prefix}gaycheck
 │⊳🎟️ ${prefix}greatcheck
-│⊳🎟️ ${prefix}awesomecheck
+│⊳🎟️ ${prefix}awesomecheck 
 └──────────⊰
 
 ┌──⊰ _*⛩️OTHERS⛩️*_
@@ -1619,7 +1610,7 @@ const Mariaarray= [
         
             const Mariaselection = Mariaarray[Math.floor(Math.random()*Mariaarray.length)]
         
-            Maria.sendMessage(from,{image:{url: "./Gallery/thumb.jpg"},caption:txt},{quoted:m})
+            Maria.sendMessage(from,{image:{url: "./Gallery/Mariach.jpg"},caption:txt},{quoted:m})
 
 break           
                 case 'circlevideo': {
